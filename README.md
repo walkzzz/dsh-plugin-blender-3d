@@ -51,3 +51,9 @@ adding [`registry-entry.json`](./registry-entry.json) to the list.
 ## License
 
 MIT
+
+## Example
+
+```sh
+node examples/carve_block.mjs   # box minus sphere -> carved.stl
+```
