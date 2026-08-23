@@ -1,5 +1,15 @@
 # Publishing dsh-plugin-blender-3d to the DeepSeek Harness plugin market
 
+> **Status (2025-08-24):** source pushed to
+> [`walkzzz/dsh-plugin-blender-3d`](https://github.com/walkzzz/dsh-plugin-blender-3d),
+> release `v0.1.0` with prebuilt tarball uploaded, and a catalog PR opened against
+> `awesome-dsh-plugin/awesome-dsh-plugin` (entry: `registry-entry.yml`).
+> npm publish was skipped (no npm credentials); installs use the GitHub tarball,
+> which still skips the build-approval step. A maintainer review + CI green are
+> the precondition for the listing to merge — the repo-age CI check may flag this
+> freshly-created repo; if so, resubmit after a few days (nothing is held against
+> a resubmission).
+
 The market (`dshmarket`) browses the curated catalog at
 **https://awesome-dsh-plugin.com/plugins.json**, which is backed by the GitHub
 repo [`awesome-dsh-plugin/awesome-dsh-plugin`](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin).
