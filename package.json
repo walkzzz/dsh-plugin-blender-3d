@@ -1,0 +1,57 @@
+{
+  "name": "dsh-plugin-blender-3d",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: drive Blender 3D modeling (primitives, boolean CSG, transform, material, modifier, scene, export STL/OBJ/PLY/GLTF) via a JSON bridge. Bundles a headless trimesh+manifold3d runtime and a Blender bpy add-on. · DSH 插件：通过 JSON 桥接驱动 Blender 3D 建模。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./bridge-client": {
+      "default": "./lib/bridge-client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/bridge-client.js",
+    "lib/runtime/**/*",
+    "skill/**/*",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "blender",
+    "3d",
+    "modeling",
+    "csg",
+    "trimesh",
+    "manifold"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitcode.com/LOOYIABC/blender.git",
+    "directory": "dsh-plugin-blender-3d"
+  },
+  "homepage": "https://gitcode.com/LOOYIABC/blender"
+}

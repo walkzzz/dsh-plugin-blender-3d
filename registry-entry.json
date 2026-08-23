@@ -1,0 +1,14 @@
+{
+  "name": "dsh-plugin-blender-3d",
+  "owner": "LOOYIABC",
+  "url": "https://gitcode.com/LOOYIABC/blender",
+  "category": "tools",
+  "description": {
+    "en": "Drive Blender 3D modeling from the harness — create primitives, run boolean CSG (union/intersect/difference), transform, material, modifier, scene query, and export STL/OBJ/PLY/GLTF via a JSON bridge. Bundles a headless trimesh+manifold3d runtime (no Blender needed) and a Blender bpy add-on for full power. OOM-safe: geometry is exported to disk, never inlined into the tool channel.",
+    "zh": "在 DeepSeek Harness 中驱动 Blender 3D 建模——创建基本体、布尔运算（并/交/差）、变换、材质、修改器、场景查询，并通过 JSON 桥接导出 STL/OBJ/PLY/GLTF。内置无头 trimesh+manifold3d 运行时（无需安装 Blender）与 Blender bpy 插件以获得完整能力。防 OOM：几何体导出到磁盘，绝不内联进工具通道。"
+  },
+  "npm": "dsh-plugin-blender-3d",
+  "stars": 0,
+  "install": "dsh plugin --profile web add dsh-plugin-blender-3d",
+  "added": "2025-08-24"
+}

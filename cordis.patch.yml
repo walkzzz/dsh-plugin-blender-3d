@@ -1,0 +1,4 @@
+# dsh bundle patch: inserts this plugin into a profile's layer stack.
+- insert:
+    - id: blender-3d
+      name: 'dsh-plugin-blender-3d'
