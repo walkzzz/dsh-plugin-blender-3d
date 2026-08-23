@@ -53,5 +53,9 @@
     "url": "git+https://gitcode.com/LOOYIABC/blender.git",
     "directory": "dsh-plugin-blender-3d"
   },
-  "homepage": "https://gitcode.com/LOOYIABC/blender"
+  "homepage": "https://gitcode.com/LOOYIABC/blender",
+  "scripts": {
+    "test": "node tests/smoke.mjs",
+    "example": "node examples/carve_block.mjs"
+  }
 }
