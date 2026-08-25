@@ -116,3 +116,33 @@ sleep 1
 node /workspace/blender_harness/blender_driver.js --url http://127.0.0.1:13082 demo
 # expect: DEMO OK  +  /workspace/demo_cli.stl written
 ```
+
+## Auto environment setup (`blender_setup`)
+
+On a fresh machine, call the **`blender_setup`** tool first — it auto-detects,
+installs, configures, and verifies the environment with no manual steps:
+
+- **Detect**: finds `python3`/`python`, probes `numpy`/`trimesh`/`manifold3d`,
+  and looks for an installed Blender (common paths + `blender --version`).
+- **Install**: creates an isolated venv at `$DSH_HOME/.blender-plugin/venv` (or
+  `~/.blender-plugin/venv`) and `pip install`s `numpy>=1.26 trimesh>=4.0
+  manifold3d>=2.2`. No Blender needed for headless modeling/export.
+- **Configure** (optional): pass `install_blender: true` to also fetch a
+  portable Blender (linux x64 `tar.xz`; mac/win get a download URL + manual
+  instructions instead of half-extracting).
+- **Verify**: smoke-tests trimesh (builds a box, asserts 12 faces) and, if
+  Blender was installed, `blender --background` import `bpy`.
+- **Persist**: writes `~/.blender-plugin/config.json` (`pythonPath`,
+  `blenderPath`, versions) so the bridge auto-uses the venv python on later
+  calls. If a `blender_model` call finds trimesh missing, the bridge also
+  self-heals once (creates the venv, retries).
+
+```jsonc
+// blender_setup({ "install_blender": false })  →
+{ "ok": true, "stage": "done",
+  "detected": { "platform": "linux", "python": { "path": "python3", "version": "3.11.6" },
+                "deps": { "numpy": true, "trimesh": true, "manifold3d": true },
+                "blender": null },
+  "config": { "pythonPath": "~/.blender-plugin/venv/bin/python" },
+  "verify": { "trimesh": { "ok": true, "detail": "trimesh_ok 8" }, "blender": null } }
+```
