@@ -2,14 +2,17 @@
 
 > **Status (2025-08-24):** source pushed to
 > [`walkzzz/dsh-plugin-blender-3d`](https://github.com/walkzzz/dsh-plugin-blender-3d)
-> (10 commits), release `v0.1.0` with prebuilt tarball uploaded, and catalog PR
+> (10+ commits), releases `v0.1.0`/`v0.1.1` with prebuilt tarballs uploaded, and
+> catalog PR
 > [#2933](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/pull/2933)
-> opened against `awesome-dsh-plugin/awesome-dsh-plugin` (entry:
-> `data/plugins/walkzzz__dsh-plugin-blender-3d.yml`). CI: README regen ✅,
-> 10-commit bar ✅; only the repo-age gate (≥1 day) is pending — retrigger CI
-> (push any commit to the fork branch, or close/reopen) after ~24h, or a
-> maintainer can merge. npm publish was skipped (no npm credentials); installs
-> use the GitHub tarball, which still skips the build-approval step.
+> open against `awesome-dsh-plugin/awesome-dsh-plugin` (entry:
+> `data/plugins/walkzzz__dsh-plugin-blender-3d.yml`, tarball bumped to v0.1.1).
+> **Published to npm as `dsh-plugin-blender-3d@0.1.1`** — install with
+> `dsh plugin --profile web add dsh-plugin-blender-3d` (skips build approval).
+> The package's `repository` now points at the GitHub repo, so the marketplace
+> npm probe maps it to the catalog entry automatically. CI on the PR: README
+> regen ✅, 10-commit bar ✅; only the repo-age gate (≥1 day) is pending —
+> retrigger CI after ~24h, or a maintainer can merge.
 
 The market (`dshmarket`) browses the curated catalog at
 **https://awesome-dsh-plugin.com/plugins.json**, which is backed by the GitHub

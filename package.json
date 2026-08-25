@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-blender-3d",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness plugin: drive Blender 3D modeling (primitives, boolean CSG, transform, material, modifier, scene, export STL/OBJ/PLY/GLTF) via a JSON bridge. Bundles a headless trimesh+manifold3d runtime and a Blender bpy add-on. · DSH 插件：通过 JSON 桥接驱动 Blender 3D 建模。",
   "type": "module",
   "main": "lib/index.js",
@@ -50,10 +50,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitcode.com/LOOYIABC/blender.git",
-    "directory": "dsh-plugin-blender-3d"
+    "url": "git+https://github.com/walkzzz/dsh-plugin-blender-3d.git"
   },
-  "homepage": "https://gitcode.com/LOOYIABC/blender",
+  "homepage": "https://github.com/walkzzz/dsh-plugin-blender-3d",
   "scripts": {
     "test": "node tests/smoke.mjs",
     "example": "node examples/carve_block.mjs"
